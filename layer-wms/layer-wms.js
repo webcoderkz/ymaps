@@ -78,7 +78,8 @@ ymaps.modules.define('LayerWMS', [
          Object.keys(wmsParams)
            .filter(function (param) { return Boolean(wmsParams[param]) })
            .reduce(function (urlParts, param) {
-             var name = encodeURI(param);
+//              var name = encodeURI(param);
+             var name = param;
              return urlParts.concat([
                opts.uppercase ? name.toUpperCase() : name,
                encodeURI(wmsParams[name])

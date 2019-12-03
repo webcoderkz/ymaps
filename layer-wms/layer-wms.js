@@ -82,7 +82,8 @@ ymaps.modules.define('LayerWMS', [
              var name = param;
              return urlParts.concat([
                opts.uppercase ? name.toUpperCase() : name,
-               encodeURI(wmsParams[name])
+//                encodeURI(wmsParams[name])
+               wmsParams[name]
              ].join('='));
            }, []).join('&');
      };

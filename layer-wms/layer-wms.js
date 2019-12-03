@@ -74,17 +74,16 @@ ymaps.modules.define('LayerWMS', [
          crs: opts.crs || getCrs(projection),
          srs: opts.srs || getCrs(projection) // fallback for old WMS versions
        });
-       return baseUrl + (baseUrl.indexOf('?') > -1 ? '&' : '?') +
-         Object.keys(wmsParams)
-           .filter(function (param) { return Boolean(wmsParams[param]) })
-           .reduce(function (urlParts, param) {
+//        return baseUrl + (baseUrl.indexOf('?') > -1 ? '&' : '?') +
+//          Object.keys(wmsParams)
+//            .filter(function (param) { return Boolean(wmsParams[param]) })
+//            .reduce(function (urlParts, param) {
 //              var name = encodeURI(param);
-             var name = 12312312312312321;
-             return urlParts.concat([
-               opts.uppercase ? name.toUpperCase() : name,
-               encodeURI(wmsParams[name])
-             ].join('='));
-           }, []).join('&');
+//              return urlParts.concat([
+//                opts.uppercase ? name.toUpperCase() : name,
+//                encodeURI(wmsParams[name])
+//              ].join('='));
+//            }, []).join('&');
      };
      return layer;
    }
